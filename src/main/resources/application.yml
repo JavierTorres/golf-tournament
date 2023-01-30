@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      uri: "mongodb://root:example@localhost:27017/golf-tournament?authSource=admin&serverSelectionTimeoutMS=10000&connectTimeoutMS=10000"
+
+mongock:
+  enabled: true
+  change-logs-scan-package:
+    - com.javiertorres.golftournament.infrastructure.mongo.db.changelog
+  throw-exception-if-cannot-obtain-lock: true
+db:
+  config:
+    minPoolSize: 0
+    maxPoolSize: 100
